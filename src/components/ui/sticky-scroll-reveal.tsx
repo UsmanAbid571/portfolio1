@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { useMotionValueEvent, useScroll } from "motion/react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 import { LinkPreview } from "./link-preview";
 
 export const StickyScroll = ({
