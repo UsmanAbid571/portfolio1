@@ -17,7 +17,7 @@ const About = () => {
          />
          {/* Radial gradient for the container to give a faded look */}
          <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
-         <p className="relative text-4xl font-bold font-sansmd:text-7xl">
+         <div className="relative text-4xl font-bold font-sans md:text-7xl">
            <ScrollFloat
                            animationDuration={1}
                            ease='back.inOut(2)'
@@ -25,8 +25,8 @@ const About = () => {
                            scrollEnd='bottom bottom-=40%'
                            stagger={0.03}
                            > About</ScrollFloat>
-         </p>
-         <p className="w-[70%] mt-4 text-sm  text-slate-300"> 
+         </div>
+         <div className="w-[70%] mt-4 text-sm  text-slate-300"> 
            <ScrollReveal
             baseOpacity={0}
             enableBlur={true}
@@ -40,7 +40,7 @@ const About = () => {
          
             I love turning ideas into interactive digital products. Whether it&apos;s developing robust REST APIs, integrating third-party services, or crafting pixel-perfect interfaces with React, I enjoy every part of the development lifecycle.
          
-            Let&apos;s build something awesome together!</ScrollReveal></p>
+            Let&apos;s build something awesome together!</ScrollReveal></div>
        </div>
   )
 }

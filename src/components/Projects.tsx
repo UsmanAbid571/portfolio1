@@ -84,7 +84,7 @@ const content = [
 export default function Projects() {
   return (
     <div className="w-full">
-      <h1 className="relative z-10 text-4xl md:text-7xl text-center font-sans font-bold">
+      <span className="relative z-10 text-4xl md:text-7xl text-center font-sans font-bold">
         <ScrollFloat
         animationDuration={1}
        ease='back.inOut(2)'
@@ -94,7 +94,7 @@ export default function Projects() {
        textClassName="">
          Projects </ScrollFloat>
 
-      </h1>
+      </span>
        
       <StickyScroll content={content} />
     </div>

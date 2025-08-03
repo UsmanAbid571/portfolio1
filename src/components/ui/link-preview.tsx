@@ -80,7 +80,7 @@ export const LinkPreview = ({
     <>
       {isMounted ? (
         <div className="hidden">
-          <Image
+          <img
             src={src}
             width={width}
             height={height}

@@ -1,28 +1,74 @@
-'use client'
-import GooeyNav from '@/blocks/Components/GooeyNav/GooeyNav'
-import React from 'react'
+"use client";
+import {
+  Navbar,
+  NavBody,
+  NavItems,
+  MobileNav,
+  NavbarLogo,
+  NavbarButton,
+  MobileNavHeader,
+  MobileNavToggle,
+  MobileNavMenu,
+} from "@/components/ui/resizable-navbar";
+import { useState } from "react";
 
+export default function NavbarComponent() {
+  const navItems = [
+    {
+      name: "About",
+      link: "#about",
+    },
+    {
+      name: "Projects",
+      link: "#projects",
+    },
+    {
+      name: "Contact",
+      link: "#contact",
+    },
+  ];
 
-const items = [
-  { label: "Home", href: "#" },
-  { label: "About", href: "#" },
-  { label: "Contact", href: "#" },
-];
-const Navbar = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
-    <div className='sticky flex justify-center mt-7'>
-      <GooeyNav
-    items={items}
-    particleCount={15}
-    particleDistances={[90, 10]}
-    particleR={100}
-    initialActiveIndex={0}
-    animationTime={600}
-    timeVariance={300}
-    colors={[1, 2, 3, 1, 2, 3, 1, 4]}
-  />
+    <div className="fixed w-full z-50 top-2">
+      <Navbar >
+        {/* Desktop Navigation */}
+        <NavBody className="py-6">
+  
+          <NavItems items={navItems} />
+         
+        </NavBody>
+
+        {/* Mobile Navigation */}
+        <MobileNav>
+          <MobileNavHeader >
+            <MobileNavToggle
+              isOpen={isMobileMenuOpen}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            />
+          </MobileNavHeader>
+
+          <MobileNavMenu
+            isOpen={isMobileMenuOpen}
+            onClose={() => setIsMobileMenuOpen(false)}
+          >
+            {navItems.map((item, idx) => (
+              <a
+                key={`mobile-link-${idx}`}
+                href={item.link}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="relative text-neutral-600 dark:text-neutral-300"
+              >
+                <span className="block">{item.name}</span>
+              </a>
+            ))}
+          </MobileNavMenu>
+        </MobileNav>
+      </Navbar>
+
+      {/* Navbar */}
     </div>
-  )
+  );
 }
 
-export default Navbar

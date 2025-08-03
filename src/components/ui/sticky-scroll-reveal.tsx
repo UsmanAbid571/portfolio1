@@ -86,7 +86,7 @@ export const StickyScroll = ({
               >
                 {item.title}
               </motion.h2>
-              <motion.p
+              <motion.div
                 initial={{
                   opacity: 0,
                 }}
@@ -97,29 +97,29 @@ export const StickyScroll = ({
               >
                 {item.description}
                 {item.techStack.length > 0 && (
-                  <p className="text-sm mt-5">
+                  <span className="text-sm mt-5">
                     <b>Tech Stack:</b> {item.techStack.join(", ")}
-                  </p>
+                  </span>
                 )}
                 {
                   item.liveLink && (
-                    <p className="text-sm mt-5">
+                    <span className="text-sm mt-5">
                      <LinkPreview url={item.liveLink} className="font-bold">
                       Try it live
                     </LinkPreview>
-                    </p>  
+                    </span>  
                   )
                 }
                 {
                   item.githubRepo && (
-                    <p className="text-sm mt-5">
+                    <span className="text-sm mt-5">
                      <LinkPreview url={item.githubRepo} className="font-bold">
                      Visit GitHub Repo
                      </LinkPreview>
-                    </p>  
+                    </span>  
                   )
                 }
-              </motion.p>
+              </motion.div>
             </div>
           ))}
           <div className="h-40" />

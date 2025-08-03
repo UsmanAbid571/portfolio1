@@ -14,14 +14,14 @@ const Hero = () => {
            <h1 className="text-4xl md:text-7xl font-extrabold text-center ">
               <SplitText text="Hi, I'm Usman"  />
            </h1>
-           <p className="mt-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto">
+           <div className="mt-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto">
              <TextType  text={["Frontend developer", "Mern stack developer", "Creating Web Solutions","Full Stack developer"]}
            typingSpeed={75}
            pauseDuration={1500}
            showCursor={true}
            cursorCharacter="_"/>  
        
-           </p>
+           </div>
          </div>
        </div>
   )
