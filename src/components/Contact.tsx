@@ -60,7 +60,7 @@ export default function Demo() {
             Whether you have a project in mind, want to collaborate, or just want to say hello, I&apos;d love to hear from you! Feel free to reach out through the Direct message or connect with me directly via email or LinkedIn.<b> Let&apos;s build something great together.</b></p>
           <span className="flex space-x-4 mt-6">
             <Link href="https://github.com/UsmanAbid571"><Image src="/github.svg" width={40} height={40} alt="Github" /></Link>
-            <Link href="https://www.linkedin.com/in/muhammad-usman-abid"><Image src="/linkedin.svg" width={40} height={40} alt="Linkedin" /></Link>
+            <Link href="https://www.linkedin.com/in/muhammad-usman-abid"><Image src="/linkedIn.svg" width={40} height={40} alt="Linkedin" /></Link>
             <Link href="https://mail.google.com/mail/?view=cm&fs=1&to=muhammad.usmanabid571@gmaill.com&su=Hello&body=Message%20Body"><Image src="/email.png" width={40} height={40} alt="Gmail"/></Link>
           </span>
           
