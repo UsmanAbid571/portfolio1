@@ -68,10 +68,10 @@ export const StickyScroll = ({
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="relative flex h-[30rem] justify-center space-x-10 overflow-y-auto rounded-md p-10"
+      className="relative flex h-[30rem] justify-center space-x-10 scrollbar-hidden overflow-y-auto rounded-md p-10"
       ref={ref}
     >
-      <div className="div relative flex items-start px-4 scrollbar-hidden">
+      <div className="div relative flex items-start px-4 ">
         <div className="max-w-2xl">
           {content.map((item, index) => (
             <div key={item.title + index} className="my-20">
@@ -95,12 +95,12 @@ export const StickyScroll = ({
                 }}
                 className="text-kg mt-10 max-w-sm text-slate-300"
               >
-                {item.description}
+                {item.description}<br/>
                 {item.techStack.length > 0 && (
                   <span className="text-sm mt-5">
                     <b>Tech Stack:</b> {item.techStack.join(", ")}
                   </span>
-                )}
+                )}<br/>
                 {
                   item.liveLink && (
                     <span className="text-sm mt-5">
@@ -109,7 +109,7 @@ export const StickyScroll = ({
                     </LinkPreview>
                     </span>  
                   )
-                }
+                }<br/>
                 {
                   item.githubRepo && (
                     <span className="text-sm mt-5">

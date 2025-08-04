@@ -22,9 +22,10 @@ import FadeContent from "@/blocks/Animations/FadeContent/FadeContent";
 import Link from "next/link";
 import Image from "next/image";
 import ScrollFloat from "@/blocks/TextAnimations/ScrollFloat/ScrollFloat";
+import BlurText from "@/blocks/TextAnimations/BlurText/BlurText";
 
-
-export default function Demo() {
+const text = " Whether you have a project in mind, want to collaborate, or just want to say hello, I'd love to hear from you! Feel free to reach out through the Direct message or connect with me directly via email or LinkedIn. Let's build something great together."
+export default function Contact() {
     const form = useForm<z.infer<typeof contactSchema>>({
            resolver: zodResolver(contactSchema),
        })   
@@ -56,11 +57,15 @@ export default function Demo() {
               > Contact</ScrollFloat>
           
           </div>
-          <p className="text-xs tracking-tight md:text-sm text-muted-foreground w-[50vw] md:w-[30vw]">
-            Whether you have a project in mind, want to collaborate, or just want to say hello, I&apos;d love to hear from you! Feel free to reach out through the Direct message or connect with me directly via email or LinkedIn.<b> Let&apos;s build something great together.</b></p>
+          <p className="text-sm tracking-tight text-muted-foreground w-[50vw] md:w-[30vw]">
+            <BlurText text={text}
+                   delay={50}
+                   animateBy="words"
+                   direction="top"
+                   className="mb-8"/></p>
           <span className="flex space-x-4 mt-6">
             <Link href="https://github.com/UsmanAbid571"><Image src="/github.svg" width={40} height={40} alt="Github" /></Link>
-            <Link href="https://www.linkedin.com/in/muhammad-usman-abid"><Image src="/linkedIn.svg" width={40} height={40} alt="Linkedin" /></Link>
+            <Link href="https://linkedin.com/in/muhammad-usman-abid-ba9035333"><Image src="/linkedIn.svg" width={40} height={40} alt="Linkedin" /></Link>
             <Link href="https://mail.google.com/mail/?view=cm&fs=1&to=muhammad.usmanabid571@gmaill.com&su=Hello&body=Message%20Body"><Image src="/email.png" width={40} height={40} alt="Gmail"/></Link>
           </span>
           

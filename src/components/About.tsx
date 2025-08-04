@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 const About = () => {
   return (
-   <div className="relative flex flex-col h-[50rem] w-full items-center justify-center bg-white dark:bg-black">
+   <div className="relative flex flex-col h-screen w-full items-center justify-center bg-white dark:bg-black">
          <div
            className={cn(
              "absolute inset-0",
