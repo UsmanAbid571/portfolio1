@@ -46,7 +46,7 @@ export default function Contact() {
   return (
     <BackgroundBeamsWithCollision>
         <FadeContent>
-      <div className="flex h-screen flex-col items-center justify-center">
+      <div className="flex min-h-screen flex-col items-center justify-center">
         <div className="flex flex-col md:flex-row gap-6 p-8 items-center w-full md:justify-around">
         <div className="md:w-[50vw] flex flex-col justify-center items-center ">
           <div className="text-4xl mb-6 font-bold font-sans md:text-7xl md:mb-6 ">
