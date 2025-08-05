@@ -20,6 +20,8 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import SpotlightCard from '@/blocks/Components/SpotlightCard/SpotlightCard';
+import Link from 'next/link';
+import { IconArrowBack, IconArrowBackUp, IconArrowBackUpDouble } from '@tabler/icons-react';
 
 
 
@@ -49,8 +51,11 @@ const Services = () => {
             }
   return (
     <div className='mb-6 p-8 min-h-screen'>
+      <nav className='flex items-center'>
+          <Button><Link href="/"><IconArrowBackUp/></Link></Button>
+      </nav>
         <FadeContent>
-      <div className="flex flex-col gap-6 h-screen items-center w-full ">
+      <div className="flex flex-col gap-4 h-screen items-center w-full ">
         <div className="md:w-[50vw] flex flex-col justify-center items-center min-h-screen">
           <div className="text-4xl mb-4 font-bold font-sans md:text-7xl ">
             Services

@@ -1,9 +1,10 @@
 
 import ScrollFloat from '@/blocks/TextAnimations/ScrollFloat/ScrollFloat'
-import ScrollReveal from '@/blocks/TextAnimations/ScrollReveal/ScrollReveal'
 import React from 'react'
 import { cn } from "@/lib/utils";
+import BlurText from '@/blocks/TextAnimations/BlurText/BlurText';
 
+const text= "Hi! I'm a passionate MERN Stack Developer with a strong focus on building modern, scalable, and responsive web applications. With hands-on experience in MongoDB, Express.js, React, and Node.js, I bring both frontend fineness and backend logic together to deliver seamless user experiences.I love turning ideas into interactive digital products. Whether it's developing robust REST APIs, integrating third-party services, or crafting pixel-perfect interfaces with React, I enjoy every part of the development lifecycle.Let's build something awesome together!"
 const About = () => {
   return (
    <div className="relative flex flex-col h-screen w-full items-center justify-center bg-white dark:bg-black">
@@ -26,21 +27,14 @@ const About = () => {
                            stagger={0.03}
                            > About</ScrollFloat>
          </div>
-         <div className="w-[70%] mt-4 text-sm  text-slate-300"> 
-           <ScrollReveal
-            baseOpacity={0}
-            enableBlur={true}
-            baseRotation={0}
-            blurStrength={10}
-                         
-            >Hi! I&apos;m a passionate MERN Stack Developer with a strong focus on building 
-            modern, scalable, and responsive web applications. With hands-on experience in 
-            MongoDB, Express.js, React, and Node.js, I bring both frontend fineness and backend 
-            logic together to deliver seamless user experiences.
-         
-            I love turning ideas into interactive digital products. Whether it&apos;s developing robust REST APIs, integrating third-party services, or crafting pixel-perfect interfaces with React, I enjoy every part of the development lifecycle.
-         
-            Let&apos;s build something awesome together!</ScrollReveal></div>
+         <div className="w-[70%] md:w-[50vw] mt-4 text-sm  text-slate-300"> 
+          <BlurText
+  text={text}
+  delay={30}
+  animateBy="words"
+  direction="top"
+  className=""
+/></div>
        </div>
   )
 }

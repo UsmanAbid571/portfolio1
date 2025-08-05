@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Toaster } from "@/components/ui/sonner";
-import Navbar from "@/components/Navbar";
+//import Navbar from "@/components/Navbar";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
 
@@ -39,8 +39,6 @@ export default function RootLayout({
           <SpeedInsights />
           <Analytics/>
         <Toaster position="top-center"/>
-        <Navbar />
-
         {children}
         </ThemeProvider>
       </body>
